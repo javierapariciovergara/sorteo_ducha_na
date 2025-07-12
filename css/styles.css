@@ -1,0 +1,204 @@
+/* styles.css */
+
+/* ---------- Variables ---------- */
+:root {
+    --bg-color: #7d9ec0;
+    --card-color: #ffffff;
+    --primary-color: #4a90e2;
+    --text-color: #333333;
+    --border-radius: 12px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --font-family: 'Inter', 'Segoe UI', sans-serif;
+  }
+  
+  /* ---------- Global Styles ---------- */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+
+  /* ---------- Logo Header ---------- */
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  /* Escalado opcional para pantallas grandes */
+  @media (min-width: 600px) {
+    .logo-img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+
+  /* ---------- Headings ---------- */
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  /* ---------- Form Section ---------- */
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: var(--card-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .form-section input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+  
+  .form-section button {
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .form-section button:hover {
+    background-color: #357ab8;
+  }
+  
+  /* ---------- Participant List ---------- */
+  .list-section {
+    margin-top: 2rem;
+  }
+  
+  #participant-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+  
+  #participant-list li {
+    background-color: var(--card-color);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  /* ---------- Sorteo Controls ---------- */
+  .sorteo-section {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .sorteo-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: var(--card-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .sorteo-controls select,
+  .sorteo-controls button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+  }
+  
+  .sorteo-controls select {
+    border: 1px solid #ccc;
+  }
+  
+  .sorteo-controls button {
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .sorteo-controls button:hover {
+    background-color: #357ab8;
+  }
+  
+  /* ---------- Results ---------- */
+  .result-section {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  #winner-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+  
+  #winner-list li {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  /* ---------- Responsive Desktop Enhancements ---------- */
+  @media (min-width: 600px) {
+    .form-section form,
+    .sorteo-controls {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .form-section input,
+    .form-section button,
+    .sorteo-controls select,
+    .sorteo-controls button {
+      flex: 1;
+      margin: 0 0.25rem;
+    }
+  
+    .form-section input:first-child {
+      margin-left: 0;
+    }
+  
+    .form-section button:last-child {
+      margin-right: 0;
+    }
+  
+    .sorteo-controls {
+      gap: 0.5rem;
+    }
+  }
+  

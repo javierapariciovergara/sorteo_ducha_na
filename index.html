@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorteo de Participantes</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+    <header class="logo-header">
+        <img src="./files/logo.png" alt="Logo del sorteo" class="logo-img" />
+      </header>
+
+  <main class="container">
+    <h1>Sorteo de Duchas</h1>
+    <h2>NA - Jesus en las Calles</h2>
+
+    <!-- Formulario de ingreso -->
+    <section class="form-section">
+      <form id="participant-form">
+        <input type="text" id="name" name="name" maxlength="12" placeholder="Nombre" required />
+        <input type="text" id="dni" name="dni" placeholder="DNI (solo números)" required />
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+
+    <!-- Lista de participantes -->
+    <section class="list-section">
+      <h2>Participantes</h2>
+      <ul id="participant-list"></ul>
+    </section>
+
+    <!-- Configuración del sorteo -->
+    <section class="sorteo-section">
+      <div class="sorteo-controls">
+        <label for="winner-count">Cantidad de ganadores:</label>
+        <select id="winner-count">
+          <!-- Opciones de 1 a 20 -->
+          <script>
+            // Esto se reemplazará por JavaScript externo, pero queda como referencia
+            for (let i = 1; i <= 20; i++) {
+              document.write(`<option value="${i}">${i.toString().padStart(2, '0')}</option>`);
+            }
+          </script>
+        </select>
+        <button id="draw-button">Sortear</button>
+        <button id="reset-button">Resetear</button>
+      </div>
+    </section>
+
+    <!-- Resultados del sorteo -->
+    <section class="result-section">
+      <h2 id="result-title"></h2>
+      <ul id="winner-list"></ul>
+    </section>
+  </main>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
